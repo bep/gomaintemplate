@@ -1,4 +1,4 @@
-module github.com/bep/go-main-template
+module github.com/bep/gomaintemplate
 
 go 1.17
 

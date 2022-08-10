@@ -1,2 +1,2 @@
-# go-main-template
+# gomaintemplate
 Just a simple main() Go program template.
