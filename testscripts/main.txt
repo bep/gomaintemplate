@@ -1,0 +1,4 @@
+# See https://pkg.go.dev/github.com/rogpeppe/go-internal/testscript
+
+gomaintemplate 'This is a test.'
+stdout 'This is a test.'
