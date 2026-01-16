@@ -24,15 +24,12 @@ func TestScripts(t *testing.T) {
 }
 
 func TestMain(m *testing.M) {
-	os.Exit(
-		testscript.RunMain(m, map[string]func() int{
-			"gomaintemplate": func() int {
-				fmt.Println(strings.Join(os.Args[1:], " "))
-				time.Sleep(10 * time.Millisecond)
-				return 0
-			},
-		}),
-	)
+	testscript.Main(m, map[string]func(){
+		"gomaintemplate": func() {
+			fmt.Println(strings.Join(os.Args[1:], " "))
+			time.Sleep(10 * time.Millisecond)
+		},
+	})
 }
 
 func testSetupFunc() func(env *testscript.Env) error {
